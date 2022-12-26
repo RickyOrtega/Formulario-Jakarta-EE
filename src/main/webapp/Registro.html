@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <main>0
+    <main>
         <div class="contenedor">
             <p>Registro</p>
             <form action="">
@@ -22,15 +22,25 @@
                 <input type="text" name="apellido" id="apellido" placeholder="Apellido">
                 <input type="text" name="usuario" id="usuario" placeholder="Usuario">
                 <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                <label for="pais">País:</label>
-                <input list="pais" name="pais">
-                <datalist id="pais">
-                    <option value="Argentina"></option>
-                    <option value="Colombia"></option>
-                    <option value="España"></option>
-                    <option value="Mexico"></option>
-                    <option value="Zimbabue"></option>
-                </datalist>
+                <select id="pais">
+                    <option value="" disable selected>Seleccione un país</option>
+                    <option value="Ar">Argentina</option>
+                    <option value="Co">Colombia</option>
+                    <option value="Es">España</option>
+                    <option value="Mx">México</option>
+                    <option value="Zb">Zimbabue</option>
+                </select>
+                <div class="tecnologias">
+                    <p>Tecnologias:</p>
+                    <div class="lenguajes">
+                        <label for="java"> <input type="radio" name="java" id="java"><h2>Java</h2></label>
+                        <br>
+                        <label for="js"> <input type="radio" name="js" id="JS"><h2>JavaScript</h2></label>
+                        <br>
+                        <label for="py"> <input type="radio" name="py" id="py"><h2>Python</h2></label>
+                    </div>
+                </div>
+                <input type="submit" value="Registrar">
             </form>
         </div>
     </main>

@@ -1,6 +1,9 @@
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
 
 html {
   height: 99%; }
@@ -19,12 +22,57 @@ body {
     body main .contenedor {
       margin: auto;
       background: #96abcf;
-      width: 20%;
-      height: 50%;
+      width: 400px;
+      height: 63%;
       border: none;
       border-radius: 15px; }
       body main .contenedor p {
-        padding: 20px;
+        display: inline-block;
+        margin: auto;
+        padding: 40px 48px 10px 48px;
         font-size: 30px;
         font-weight: 600;
         color: black; }
+      body main .contenedor form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+        body main .contenedor form input, body main .contenedor form select {
+          width: 300px;
+          padding: 10px 10px 10px 10px;
+          margin: auto;
+          margin-bottom: 20px;
+          border: none;
+          border-radius: 5px; }
+        body main .contenedor form .tecnologias {
+          width: 100%;
+          display: flex; }
+          body main .contenedor form .tecnologias p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px 48px 10px 48px;
+            width: 59%;
+            margin: 0;
+            height: 120px; }
+          body main .contenedor form .tecnologias .lenguajes {
+            width: 40%; }
+            body main .contenedor form .tecnologias .lenguajes label {
+              width: auto; }
+              body main .contenedor form .tecnologias .lenguajes label input {
+                padding: 100px;
+                width: 10px;
+                margin: auto; }
+              body main .contenedor form .tecnologias .lenguajes label h2 {
+                display: inline-block;
+                margin: 10px;
+                font-size: 18px; }
+        body main .contenedor form input[type=submit] {
+          cursor: pointer;
+          background: #000;
+          color: white;
+          font-size: 22px;
+          font-weight: 600; }
+          body main .contenedor form input[type=submit]:hover, body main .contenedor form input[type=submit]:focus {
+            color: #000;
+            background: white; }
