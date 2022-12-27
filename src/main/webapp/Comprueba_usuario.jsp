@@ -11,25 +11,26 @@
 	<%@ page import="java.sql.*" %>
 	
 	<%
-	String nombre = request.getParameter("nombre");
-	String apellido = request.getParameter("apellido");
 	String usuario = request.getParameter("usuario");
 	String contra = request.getParameter("contra");
-	String pais = request.getParameter("pais");
-	String tecnologia = request.getParameter("tecnologias");
 	
 	Class.forName("com.mysql.jdbc.Driver");
 	
 	try{
 		Connection myConection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto_jsp","root","FirstTrySQL$1998");
 		
-		Statement miStatement = myConection.createStatement();
+		PreparedStatement c_preparada = myConection.prepareStatement("SELECT * FROM usuarios WHERE Usuario=? AND Contrasena=?");
+		c_preparada.setString(1, usuario);
+		c_preparada.setString(2, contra);
 		
-		String instruccionSQL = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Pais, Tecnologia) VALUES ('"+ nombre + "','"+ apellido + "','"+ usuario + "','"+ contra + "','"+ pais + "','"+ tecnologia + "')";
+		ResultSet rs = c_preparada.executeQuery();
 		
-		miStatement.executeUpdate(instruccionSQL);
-		
-		out.println("Registrado con éxito.");
+		if(rs.next()){
+            out.println("Inicio de sesión autorizado.");                
+        }
+		else{
+            out.println("No tenemos usuarios registrados con las credenciales que indicaste.");                
+		}
 	}catch(Exception ex){
 		out.println("Ha habido un error al enviar sus datos a la Base de Datos.");
 	}
