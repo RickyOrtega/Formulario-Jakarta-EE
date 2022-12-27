@@ -1,0 +1,100 @@
+$color_enfasis: rgb(150, 171, 207);
+$color_secundario: rgb(8, 28, 65);
+$color_terciario: rgb(38, 78, 153);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    height: 99%;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(32, 32, 32);
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        .contenedor {
+            margin: auto;
+            background: $color_enfasis;
+            width: 400px;
+            height: 63%;
+            border: none;
+            border-radius: 15px;
+            p{
+                display: inline-block;
+                margin: auto;
+                padding: 40px 48px 10px 48px;
+                font-size: 30px;
+                font-weight: 600;
+                color: rgb(0, 0, 0);
+            }
+            form{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                input,select{
+                    width: 300px;
+                    padding:  10px 10px 10px 10px;
+                    margin: auto;
+                    margin-bottom: 20px;
+                    border: none;
+                    border-radius: 5px;
+                }
+                .tecnologias{
+                    width: 100%;
+                    display: flex;
+                    p{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 0px 48px 10px 48px;
+                        width: 59%;
+                        margin: 0;
+                        height: 120px;
+                    }
+                    .lenguajes{
+                        width: 40%;
+                        label{
+
+                            width: auto;
+                            input{
+                                padding: 100px;
+                                width: 10px;
+                                margin: auto;
+                            }
+                            h2{
+                                display: inline-block;
+                                margin: 10px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                input[type=submit]{
+                    cursor: pointer;
+                    background: #000;
+                    color: rgb(255, 255, 255);
+                    font-size: 22px;
+                    font-weight: 600;
+                    &:hover,
+                    &:focus{
+                        color: #000;
+                        background: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+    }
+}

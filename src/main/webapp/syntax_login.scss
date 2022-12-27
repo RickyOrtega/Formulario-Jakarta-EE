@@ -29,7 +29,7 @@ body {
             margin: auto;
             background: $color_enfasis;
             width: 400px;
-            height: 63%;
+            height: 30%;
             border: none;
             border-radius: 15px;
             p{
@@ -44,7 +44,7 @@ body {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                input,select{
+                input{
                     width: 300px;
                     padding:  10px 10px 10px 10px;
                     margin: auto;
@@ -52,36 +52,7 @@ body {
                     border: none;
                     border-radius: 5px;
                 }
-                .tecnologias{
-                    width: 100%;
-                    display: flex;
-                    p{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        padding: 0px 48px 10px 48px;
-                        width: 59%;
-                        margin: 0;
-                        height: 120px;
-                    }
-                    .lenguajes{
-                        width: 40%;
-                        label{
 
-                            width: auto;
-                            input{
-                                padding: 100px;
-                                width: 10px;
-                                margin: auto;
-                            }
-                            h2{
-                                display: inline-block;
-                                margin: 10px;
-                                font-size: 18px;
-                            }
-                        }
-                    }
-                }
                 input[type=submit]{
                     cursor: pointer;
                     background: #000;
